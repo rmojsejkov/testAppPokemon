@@ -45,9 +45,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 10,
   },
-  weather: {
-    paddingVertical: 5,
-  },
   abilityTextCont: {
     paddingVertical: 5,
 
