@@ -1,3 +1,3 @@
-import * as pokemonActions from './pokemonActions';
-
-export { pokemonActions }
+// import * as pokemonActions from './pokemonActions';
+//
+// export { pokemonActions }

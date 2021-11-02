@@ -9,7 +9,7 @@ export const clearPokemons = () => {
 
 export const getDefaultAllPokemons = () => {
   return async dispatch => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/1`);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=100&offset=200`);
     const fetchPokemons = await response.json();
     const pokemonsArr = Object.keys(fetchPokemons).map(key => ({
         ...fetchPokemons[key],

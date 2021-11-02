@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { PokemonView } from "./PokemonView";
+import { PokemonScreen } from "./PokemonScreen";
 import { useDispatch, useSelector } from "react-redux";
 import { Alert } from "react-native";
-import { pokemonActions } from "../../store/actions/pokemonActions";
+import * as pokemonActions from "../../store/actions/pokemonActions/pokemonActions";
 
-export const pokemonScreenContainer = ({ navigation }) => {
+export const PokemonScreenContainer = ({ navigation }) => {
   const { defaultPokemons } = useSelector(state => state.pokemon);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +28,7 @@ export const pokemonScreenContainer = ({ navigation }) => {
   }, [loadPokemons]);
 
   return (
-    <PokemonView
+    <PokemonScreen
       defaultPokemons={defaultPokemons}
       loadPokemons={loadPokemons}
       error={error}

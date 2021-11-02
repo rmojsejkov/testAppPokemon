@@ -11,11 +11,11 @@ const ServiceBlockItem = ({ pokemon, onSelect }) => {
         <TouchableComponent onPress={() => onSelect(pokemon)}>
           <View>
             <View style={styles.title}>
-              <Text style={styles.titleText}>{pokemon.name}</Text>
+              <Text style={styles.titleText}>{pokemon.id}</Text>
             </View>
             <View style={styles.abilityContainer}>
               <View style={styles.abilityTextCont}>
-                <Text style={styles.abilityText}>something text: {pokemon.name}</Text>
+                <Text style={styles.abilityText}>something text: {pokemon.id}</Text>
               </View>
             </View>
           </View>

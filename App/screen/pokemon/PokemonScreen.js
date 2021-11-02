@@ -4,7 +4,7 @@ import Colors from "../../constants/colors";
 import { LoadingScreen } from "../../components/LoadingScreen";
 import PokemonBlockItem from "../../components/PokemonBlockItem";
 
-export const PokemonView = (navigation, ...props) => {
+export const PokemonScreen = (props) => {
   const {
     error,
     isLoading,
@@ -12,8 +12,8 @@ export const PokemonView = (navigation, ...props) => {
     defaultPokemons,
   } = props;
 
+  console.log(defaultPokemons);
 
-  console.log(loadPokemons);
   if (error) {
     return (
       <View style={{ ...styles.screen, justifyContent: "center", alignItems: "center" }}>
@@ -31,11 +31,8 @@ export const PokemonView = (navigation, ...props) => {
     );
   }
 
-  console.log(loadPokemons + " pokemon");
-  console.log("dasdas");
   return (
     <>
-      <Text>adsas</Text>
       <FlatList
         data={defaultPokemons}
         keyExtractor={item => item.id + ""}

@@ -1,11 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { MainNavigator } from "./MainPokemonNavigation";
+import { PokemonNavigator } from "./pokemonScreensNavigators/pokemonNavigator";
 
 export const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <MainNavigator />
+      <PokemonNavigator />
     </NavigationContainer>
   );
 };

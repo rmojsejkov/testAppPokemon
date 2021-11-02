@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { defaultStackNavOptions } from "../navOptions";
-import { pokemonScreenContainer } from "../../screen/pokemon";
+import { PokemonScreenContainer } from "../../screen/pokemon";
 
 const PokemonStackNavigator = createStackNavigator();
 
@@ -10,8 +10,7 @@ export const PokemonNavigator = () => {
     <PokemonStackNavigator.Navigator screenOptions={defaultStackNavOptions}>
       <PokemonStackNavigator.Screen
         name="PokemonStack"
-        component={pokemonScreenContainer}
-        options={pokemonScreenContainer}
+        component={PokemonScreenContainer}
       />
     </PokemonStackNavigator.Navigator>
   );
