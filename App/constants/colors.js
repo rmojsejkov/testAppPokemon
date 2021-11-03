@@ -8,4 +8,6 @@ export default {
     gray: 'gray',
     lightgray: '#dcdcdc',
     primary: '#0000FF',
+    lightGreen: '#9ACD32',
+    coral: '#FF7F50'
 };
