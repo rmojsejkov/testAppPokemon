@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import Colors from "../../../../../constants/colors";
+import { styles } from "../styles";
 
 export const PokemonStatBlock = props => {
   const { stats } = props;
@@ -13,32 +14,11 @@ export const PokemonStatBlock = props => {
         <View style={{
           width: statItem.base_stat + 30,
           backgroundColor: statItem.base_stat > 80 ? Colors.lightGreen : Colors.coral,
-          ...styles.statContainer,
+          ...styles.statBlockContainer,
         }} />
       </View>
     ))
   );
 };
 
-const styles = StyleSheet.create({
-  itemContainer: {
-    flexDirection: "row",
-    borderBottomWidth: 1,
-    paddingVertical: 10,
-    padding: 20,
-    borderColor: Colors.darker,
-  },
-  statText: {
-    color: Colors.darker,
-    marginRight: 20,
-  },
-  statValue: {
-    color: Colors.black,
-    marginRight: 20,
-    fontWeight: "bold",
-  },
-  statContainer: {
-    borderRadius: 7,
-    marginHorizontal: 10,
-  },
-});
+

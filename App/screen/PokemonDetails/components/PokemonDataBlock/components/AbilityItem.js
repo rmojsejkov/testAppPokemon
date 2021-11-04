@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
-import Colors from "react-native/Libraries/NewAppScreen/components/Colors";
+import { styles } from "../styles";
 
 export const AbilityItem = (props) => {
   const { pokemonData } = props;
@@ -17,13 +17,3 @@ export const AbilityItem = (props) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  dataText: {
-    fontSize: 15,
-    color: Colors.black,
-  },
-  abilityContainer: {
-    flexDirection: "row",
-  },
-});

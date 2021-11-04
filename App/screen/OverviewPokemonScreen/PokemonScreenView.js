@@ -1,21 +1,18 @@
-import React from 'react';
-import {Button, FlatList, StyleSheet, Text, View} from 'react-native';
-import Colors from '../../constants/colors';
-import {LoadingScreen} from '../../components/LoadingScreen';
-import {PokemonItem} from '../../components/PokemonItem';
+import React from "react";
+import { Button, FlatList, Text, View } from "react-native";
+import Colors from "../../constants/colors";
+import { LoadingScreen } from "../../components/LoadingScreen";
+import { PokemonItem } from "../../components/PokemonItem";
+import { styles } from "./styles";
 
 export const PokemonScreenView = props => {
-  const {error, isLoading, loadPokemons, defaultPokemons, selectPokemon} =
+  const { error, isLoading, loadPokemons, defaultPokemons, selectPokemon } =
     props;
 
   if (error) {
     return (
       <View
-        style={{
-          ...styles.screen,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+        style={styles.screen}>
         <Text>{error}</Text>
         <View>
           <Button
@@ -47,18 +44,4 @@ export const PokemonScreenView = props => {
   );
 };
 
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-  },
-  buttonSearch: {
-    bottom: '15%',
-    right: '3%',
-    position: 'absolute',
-  },
-  buttonAdd: {
-    bottom: '6%',
-    position: 'absolute',
-    right: '3%',
-  },
-});
+

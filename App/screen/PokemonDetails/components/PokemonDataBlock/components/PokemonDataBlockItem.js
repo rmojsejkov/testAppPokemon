@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
-import Colors from "react-native/Libraries/NewAppScreen/components/Colors";
 import { AbilityItem } from "./AbilityItem";
+import { styles } from "../styles";
 
 export const PokemonDataBlockItem = (props) => {
 
-  const {pokemonData} = props;
+  const { pokemonData } = props;
 
   return (
     <View>
@@ -22,7 +22,7 @@ export const PokemonDataBlockItem = (props) => {
         <Text style={styles.dataText}>Weight: {pokemonData.weight}</Text>
         <View style={styles.abilityContainer}>
           <Text style={styles.dataText}>Abilities: </Text>
-          <AbilityItem pokemonData={pokemonData}/>
+          <AbilityItem pokemonData={pokemonData} />
         </View>
       </View>
     </View>
@@ -30,24 +30,3 @@ export const PokemonDataBlockItem = (props) => {
 };
 
 
-const styles = StyleSheet.create({
-  title: {
-    paddingVertical: 20,
-  },
-  titleText: {
-    textAlign: "center",
-    fontSize: 20,
-    fontWeight: "bold",
-    color: Colors.black,
-  },
-  dataContainer: {
-    paddingHorizontal: 40,
-  },
-  dataText: {
-    fontSize: 15,
-    color: Colors.black,
-  },
-  abilityContainer: {
-    flexDirection: "row",
-  },
-});
