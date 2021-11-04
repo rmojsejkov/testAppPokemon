@@ -29,8 +29,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomWidth: 1,
     paddingVertical: 10,
-    justifyContent: 'space-between',
-    paddingHorizontal: 100,
+    paddingHorizontal: 10,
     borderColor: Colors.darker,
   },
   text: {
