@@ -7,7 +7,6 @@ import {ROUTES} from '../../navigation/routes';
 
 export const OverviewPokemonScreen = memo(({navigation}) => {
   const {defaultPokemons} = useSelector(state => state.pokemon);
-  console.log(defaultPokemons);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
