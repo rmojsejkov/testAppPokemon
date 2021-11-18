@@ -18,7 +18,7 @@ export const getDefaultAllPokemons = () => {
 
 export const getPokemonDetails = id => {
   return async dispatch => {
-    const response = await fetch(`${URL}pokemon/${id}`);
+    const response = await fetch(`${URL}/pokemon/${id}`);
 
     const fetchPokemonDetails = await response.json();
 
